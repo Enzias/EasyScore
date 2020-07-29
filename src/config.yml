@@ -1,0 +1,41 @@
+settings:
+  enable: true #Enable or Disable the plugin. Default: true --> Reload or restart the server.
+  #async-update: false TODO
+  #async update can cause some problems. Default: false --> Sync update
+  update-interval: 20 #in ticks (20 ticks = 1 second)
+  disabled-worlds: #World in which no scoreboard will be displayed (including default scoreboard) --> Bypass with the /easyscore (<player>)
+    - world
+    - worldname
+messages:
+  config-reload: '&f[&6&lES&f] &aConfig successfully reloaded.' #Will be sent when some does /easyscore reload.
+  offline-player: '&f[&6&lES&f] &cThe player &6%player% &cis not online or does not exist !' #Will be sent if the argument of /easyscore player is not an online player.
+  no-permission: '&f[&6&lES&f] &cYou don''t have permission to do that !' #Will be sent if someone doesn't have enough permissions to perform a command.
+  too-many-args: '&f[&6&lES&f] &cToo many arguments !' #Will be sent if someone use /easyscore with more than 1 argument.
+  no-scoreboard: '&f[&6&lES&f] &aScoreboard successfully disabled.' #Will be sent when someone uses /easyscore command.
+  yes-scoreboard: '&f[&6&lES&f] &aScoreboard successfully enabled.' #Will be sent when someone uses /easyscore command.
+  use-main-command: '&f[&6&lES&f] &6To disable your scoreboard, use /easyscore !' #Will be sent if someone uses /easyscore player on himself.
+scoreboards:
+  default: #REQUIRED --> Will be displayed if no scoreboard is assigned to the world in which the player is located.
+    title: '&6EasyScore' #The ScoreBoard title
+    lines: #ScoreBoard's lines --> 32 characters maximum (color codes included)
+      '15': '&cDefault &4scoreboard'
+      '14': '&bAn Amazing Scoreboard'
+      '3': '&fPlaceholderAPI support'
+      '2': ''
+      '1': '&6IP: play.yourserver.net'
+  world: #OPTIONAL --> Will be display if the player is in this world.
+    title: '&6EasyScore'
+    lines:
+      '15': '&cWorld &4scoreboard'
+      '14': '&bAmazing scoreboard'
+      '3': '&fPlaceholderAPI support'
+      '2': ''
+      '1': '&6IP: play.yourserver.net'
+  world2: #OPTIONAL --> Will be display if the player is in this world.
+    title: '&6EasyScore'
+    lines:
+      '15': '&cWorld 2 &4scoreboard.'
+      '14': '&bAmazing scoreboard'
+      '3': '&fPlaceholderAPI support'
+      '2': ''
+      '1': '&6IP: play.yourserver.net'

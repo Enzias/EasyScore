@@ -1,0 +1,28 @@
+name: EasyScore
+version: 1.1.3
+description: Easy ScoreBoard Plugin.
+author: Enzias
+main: fr.enzias.easyscore.EasyScore
+commands:
+  easyscore:
+    description: Commande principale du plugin.
+    aliases: [es, scoreboard]
+    permission: easyscore.use
+    usage: /<command>
+permissions:
+  easyscore.*:
+    description: Gives all EasyScore permissions to a player.
+    children:
+      easyscore.use: true
+      easyscore.reload: true
+      easyscore.admin: true
+    default: op
+  easyscore.use:
+    description: Accès à la commande principale du plugin.
+    default: true
+  easyscore.reload:
+    description: Accès à la commande de reload du plugin.
+    default: false
+  easyscore.admin:
+    description: Permet d'activer et de désactiver le scoreboard d'un joueur.
+    default: false
